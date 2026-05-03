@@ -11,3 +11,14 @@ const canEdit = (role: keyof typeof UserRoles) => {
 }
 
 console.log(canEdit(UserRoles.Admin));
+
+
+type RichPeopleVehicle = {
+    bike: string;
+    car: string;
+    ship: string
+};
+
+type CheckVehicle<T> = T extends keyof RichPeopleVehicle ? true : false;
+
+type HasBike = CheckVehicle<'bike'>
