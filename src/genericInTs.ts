@@ -23,7 +23,7 @@ const coordinates2: Coordinates<string, number> = ["20", 30];
 
 //? array of object with generic type
 
-type User = {name: string; age: number};
+type User = { name: string; age: number };
 
 const userList: GeneralizeArray<User> = [
   {
