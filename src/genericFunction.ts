@@ -37,9 +37,9 @@ const student2 = {
   isAuthor: true,
 };
 
-type ExtData = {id: number; isAuthor: boolean}
+type Student = {id: number; isAuthor: boolean}
 
-const addStudentToCourse = <T extends ExtData>(studentInfo: T) => {
+const addStudentToCourse = <T extends Student>(studentInfo: T) => {
   return {
     course: "Ai Dev",
     ...studentInfo,
