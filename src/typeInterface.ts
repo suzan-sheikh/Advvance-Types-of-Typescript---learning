@@ -11,11 +11,17 @@ interface IUser {
   age: number;
 }
 
+//! extends interface
+
+interface UserWithRole extends IUser{
+    role: "admin" | "user"
+}
+
 type Role = {
   role: "admin" | "user";
 };
 
-type UserWithRole = User & Role;
+// type UserWithRole = User & Role;
 
 const user1: UserWithRole = {
   name: "suzan",
