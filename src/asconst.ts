@@ -22,3 +22,17 @@ type RichPeopleVehicle = {
 type CheckVehicle<T> = T extends keyof RichPeopleVehicle ? true : false;
 
 type HasBike = CheckVehicle<'bike'>
+
+// mapped type
+
+type AreaOfNum = {
+    height: number;
+    width: number;
+}
+
+type AreaOfStr = {
+    [key in keyof AreaOfNum]: string
+}
+type AreaOfBol = {
+    [key in keyof AreaOfNum]: boolean
+}
