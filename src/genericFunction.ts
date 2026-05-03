@@ -37,7 +37,7 @@ const student2 = {
   isAuthor: true,
 };
 
-type Student = {id: number; isAuthor: boolean}
+type Student = { id: number; isAuthor: boolean };
 
 const addStudentToCourse = <T extends Student>(studentInfo: T) => {
   return {
