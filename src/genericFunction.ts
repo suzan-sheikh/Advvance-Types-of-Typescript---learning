@@ -27,4 +27,29 @@ const result = <X, Y> (param1: X, param2: Y) => {
     return [param1, param2]
 }
 
-console.log(result('suzan', 1230));
+// console.log(result('suzan', 1230));
+
+const student1 = {
+    name: "suzan",
+    hasPen: true,
+}
+const student2 = {
+    id: 12542,
+    name: 'jack',
+    hasCar: true,
+    isAuthor: true
+}
+
+
+
+const addStudentToCourse = <T>(studentInfo: T) => {
+    return {
+        course: 'Ai Dev',
+        ...studentInfo
+    }
+}
+
+console.log(addStudentToCourse(student1);
+
+
+
