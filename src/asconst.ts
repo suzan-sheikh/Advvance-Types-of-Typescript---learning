@@ -36,3 +36,16 @@ type AreaOfStr = {
 type AreaOfBol = {
     [key in keyof AreaOfNum]: boolean
 }
+
+// Next Level
+
+type ArrayOfNew<T> = {
+    [key in keyof T]: T[key]
+}
+
+const result: ArrayOfNew<{height: number; with: string}> = {
+    height: 2202,
+    with: 'suzan'
+}
+
+console.log(result);
